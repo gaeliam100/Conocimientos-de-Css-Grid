@@ -1,0 +1,20 @@
+.basic-grid{
+    display: grid;
+    gap: 1rem;
+/*
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    */
+    /*En vez de escribir 12 columnas se puede ocupar la función repeat para no escribir
+    mucho Código
+    */
+    grid-template-columns: repeat(12,1fr);
+
+    /*Mejor espaciado,pero Overflow
+    Esta funcion va a asegurarse de que mis columnas no se vayan por debajo de los 240px pero permiteles expandirse
+    tanto como una fraccion del espacio
+    */
+    grid-template-columns: repeat(12,minmax(240px,1fr));
+
+    /*Existe Tambien Auto-fill que no tomará el 100 del espacio*/
+    grid-template-columns: repeat(Auto-fit,minmax(240px,1fr));    
+}

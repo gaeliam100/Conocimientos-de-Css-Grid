@@ -1,0 +1,14 @@
+.photo-grid{
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-auto-rows: 204px;
+}
+@media(min-width:600px){
+    .card-tall{
+        grid-row:span auto/ auto;
+    }
+    .card-wide{
+        grid-column:span auto/ auto;
+    }
+}
